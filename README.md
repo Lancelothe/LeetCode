@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode Algorithm
+LeetCode Algorithm Practice
