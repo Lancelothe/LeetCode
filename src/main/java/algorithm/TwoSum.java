@@ -9,6 +9,14 @@ import java.util.Arrays;
 public class TwoSum {
 
     static class Solution {
+        /**
+         * 解法：
+         *      1、对原整型数组对一个拷贝，操作此拷贝，对它进行排序；
+         *      2、用快排的思路，前后两个指针分别从前和后靠近移动；
+         *      3、因为是排序过的升序数组，所以数组第一位和最后一位相加相当于最小值+最大值，属于个中值，拿此值和目标值判断大小，如果大于目标值，则数组最后一位前移，否则数组首位后移。
+         *      4、直到找到最小值+最大值=目标值 时，用此最小值和最大值找到在原数组中的索引。这里有两种情况：(1)如果最小值==最大值，则索引不能相同；(2)否则正常赋值到返回的数组里；
+         *      5、最后对返回数组排序下，因为考虑数组是负数的情况，最大最小值是反的，即索引也会是反的。
+         */
         public int[] twoSum(int[] nums, int target) {
 
             int[] numbers = Arrays.copyOf(nums, nums.length);
@@ -62,3 +70,32 @@ public class TwoSum {
 
     }
 }
+
+/*
+ * @lc app=leetcode id=1 lang=java
+ *
+ * [1] Two Sum
+ *
+ * https://leetcode.com/problems/two-sum/description/
+ *
+ * algorithms
+ * Easy (40.35%)
+ * Total Accepted:    1.4M
+ * Total Submissions: 3.5M
+ * Testcase Example:  '[2,7,11,15]\n9'
+ *
+ * Given an array of integers, return indices of the two numbers such that they
+ * add up to a specific target.
+ *
+ * You may assume that each input would have exactly one solution, and you may
+ * not use the same element twice.
+ *
+ * Example:
+ *
+ *
+ * Given nums = [2, 7, 11, 15], target = 9,
+ *
+ * Because nums[0] + nums[1] = 2 + 7 = 9,
+ * return [0, 1].
+ *
+ */
