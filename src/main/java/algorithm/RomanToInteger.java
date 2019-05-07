@@ -35,7 +35,7 @@ public class RomanToInteger {
      * @param roman
      * @return
      */
-    private static int romanToInt_1(String roman) {
+    private static int romanToInt1(String roman) {
         char[] romans = roman.toCharArray();
         int result = 0;
         for (int i = 0; i < romans.length; i++) {
@@ -58,7 +58,7 @@ public class RomanToInteger {
      * @param roman
      * @return
      */
-    private static int romanToInt_2(String roman) {
+    private static int romanToInt2(String roman) {
         char[] romans = roman.toCharArray();
         int result = 0;
         for (int i = 0; i < romans.length; i++) {
@@ -75,9 +75,9 @@ public class RomanToInteger {
 
     public static void main(String[] args) {
         // 输出 1994
-        System.out.println(romanToInt_2("MCMXCIV"));
-        System.out.println(romanToInt_1("IVI"));
-        System.out.println(romanToInt_1("VVVVV"));
+        System.out.println(romanToInt2("MCMXCIV"));
+        System.out.println(romanToInt1("IVI"));
+        System.out.println(romanToInt1("VVVVV"));
     }
 
     /*
