@@ -1,27 +1,10 @@
-package algorithm;
+package algorithm.linkedlist;
 
 /**
  * @author lancelot
  * @date 2019/5/5
  */
 public class AddTwoNumbers {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        @Override
-        public String toString() {
-            return "ListNode{" +
-                    "val=" + val +
-                    ", next=" + next +
-                    '}';
-        }
-    }
 
     /**
      * 思路：
@@ -33,7 +16,7 @@ public class AddTwoNumbers {
      */
     private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
+        ListNode p = l1, q = l2, current = dummyHead;
 
         if (l1 == null) {
             return l2;
@@ -48,8 +31,8 @@ public class AddTwoNumbers {
             int v2 = (q != null) ? q.val : 0;
             int sum = carry + v1 + v2;
             carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
+            current.next = new ListNode(sum % 10);
+            current = current.next;
             if (p != null) {
                 p = p.next;
             }
@@ -59,7 +42,7 @@ public class AddTwoNumbers {
         }
 
         if (carry > 0) {
-            curr.next = new ListNode(carry);
+            current.next = new ListNode(carry);
         }
         return dummyHead.next;
     }
@@ -111,13 +94,5 @@ public class AddTwoNumbers {
      * Explanation: 342 + 465 = 807.
      *
      *
-     */
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode(int x) { val = x; }
-     * }
      */
 }
