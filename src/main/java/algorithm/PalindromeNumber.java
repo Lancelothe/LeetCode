@@ -3,6 +3,7 @@ package algorithm;
 /**
  * @author lancelot
  * @date 2019/2/19
+ * @description leetcode [9]
  */
 public class PalindromeNumber {
 

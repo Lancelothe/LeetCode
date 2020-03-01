@@ -5,6 +5,7 @@ import java.util.Stack;
 /**
  * @author lancelot
  * @date 2019/5/4
+ * @description leetcode [20]
  */
 public class ValidParentheses {
 

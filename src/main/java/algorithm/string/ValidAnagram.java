@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * @author lancelot
  * @date 2020/2/5
+ * @description leetcode [242]
  */
 public class ValidAnagram {
     public static boolean isAnagram(String s, String t) {

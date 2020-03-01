@@ -3,6 +3,7 @@ package algorithm.string;
 /**
  * @author lancelot
  * @date 2020/2/5
+ * @description leetcode [205]
  */
 public class IsomorphicString {
     public static boolean isIsomorphic(String s, String t) {

@@ -3,6 +3,7 @@ package algorithm;
 /**
  * @author lancelot
  * @date 2020/2/1
+ * @description leetcode [88]
  */
 public class MergeSortedArray {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {

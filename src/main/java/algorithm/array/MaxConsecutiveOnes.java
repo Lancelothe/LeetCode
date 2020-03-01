@@ -3,6 +3,7 @@ package algorithm.array;
 /**
  * @author lancelot
  * @date 2020/2/6
+ * @description leetcode [485]
  */
 public class MaxConsecutiveOnes {
     public static int findMaxConsecutiveOnes(int[] nums) {

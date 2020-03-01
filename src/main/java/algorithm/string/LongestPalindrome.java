@@ -3,6 +3,7 @@ package algorithm.string;
 /**
  * @author lancelot
  * @date 2020/2/5
+ * @description leetcode [409]
  */
 public class LongestPalindrome {
     public static int longestPalindrome(String s) {

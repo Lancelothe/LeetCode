@@ -3,6 +3,7 @@ package algorithm;
 /**
  * @author lancelot
  * @date 2020/2/1
+ * @description leetcode [680]
  */
 public class ValidPalindromeII {
     public static boolean validPalindrome(String s) {

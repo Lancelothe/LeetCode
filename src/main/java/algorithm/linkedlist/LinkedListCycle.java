@@ -3,6 +3,7 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/1/23
+ * @description leetcode [141]
  */
 public class LinkedListCycle {
     public static boolean hasCycle(ListNode head) {

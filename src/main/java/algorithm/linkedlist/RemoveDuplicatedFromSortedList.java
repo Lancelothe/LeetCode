@@ -3,6 +3,7 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/1
+ * @description leetcode [83]
  */
 public class RemoveDuplicatedFromSortedList {
 

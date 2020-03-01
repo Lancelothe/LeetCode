@@ -3,6 +3,7 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/1
+ * @description leetcode [24]
  */
 public class SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {

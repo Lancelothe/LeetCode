@@ -3,6 +3,7 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/2
+ * @description leetcode [234]
  */
 public class PalindromeLinkedList {
     public static boolean isPalindrome(ListNode head) {

@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * @author lancelot
  * @date 2020/2/1
+ * @description leetcode [524]
  */
 public class LongestWordInDictThroughDel {
     public static String findLongestWord(String s, List<String> d) {

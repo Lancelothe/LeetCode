@@ -3,6 +3,7 @@ package algorithm.string;
 /**
  * @author lancelot
  * @date 2020/2/5
+ * @description leetcode [647]
  */
 public class PalindromicSubstrings {
     private static int cnt = 0;

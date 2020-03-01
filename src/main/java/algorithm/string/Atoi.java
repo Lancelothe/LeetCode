@@ -3,6 +3,7 @@ package algorithm.string;
 /**
  * @author lancelot
  * @date 2020/1/27
+ * @description leetcode [8] String to Integer
  */
 public class Atoi {
     public static int myAtoi(String str) {

@@ -3,6 +3,7 @@ package algorithm;
 /**
  * @author lancelot
  * @date 2019/5/4
+ * @description leetcode [14]
  */
 public class LongestCommonPrefix {
 

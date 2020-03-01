@@ -3,6 +3,7 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/2
+ * @description leetcode [725]
  */
 public class SplitLinkedListInParts {
     public ListNode[] splitListToParts(ListNode root, int k) {

@@ -3,6 +3,7 @@ package algorithm;
 /**
  * @author lancelot
  * @date 2020/2/1
+ * @description leetcode [633]
  */
 public class SumOfSquareNumbers {
     public static boolean judgeSquareSum(int c) {
