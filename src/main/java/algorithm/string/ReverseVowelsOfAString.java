@@ -6,7 +6,8 @@ import java.util.HashSet;
 /**
  * @author lancelot
  * @date 2020/2/1
- * @description leetcode [345]
+ * @description leetcode [345] 转字符串中的元音字母
+ * 编写一个函数，以字符串作为输入，反转该字符串中的元音字母。
  */
 public class ReverseVowelsOfAString {
     private final static HashSet<Character> vowels = new HashSet<>(

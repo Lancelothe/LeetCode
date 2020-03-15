@@ -3,7 +3,8 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/1
- * @description leetcode [160]
+ * @description leetcode [160] 相交链表
+ * 编写一个程序，找到两个单链表相交的起始节点。
  */
 public class IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

@@ -3,7 +3,8 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/1
- * @description leetcode [206]
+ * @description leetcode [206] 翻转链表
+ * 反转一个单链表。
  */
 public class ReverseList {
 

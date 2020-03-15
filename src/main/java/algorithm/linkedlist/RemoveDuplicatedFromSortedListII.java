@@ -3,11 +3,30 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/1
- * @description leetcode [82]
+ * @description leetcode [82] 删除排序链表中的重复元素 II
+ * 给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。
  */
 public class RemoveDuplicatedFromSortedListII {
     public ListNode deleteDuplicates(ListNode head) {
-        return null;
+        if (null == head) return null;
+
+        ListNode virtual = new ListNode(0);
+        ListNode res = virtual;
+        virtual.next = head;
+        while (virtual.next != null && virtual.next.next != null) {
+            ListNode p = virtual.next;
+            ListNode q = virtual.next.next;
+            if (q.val == p.val) {
+                while (q != null && q.val == p.val) {
+                    q = q.next;
+                }
+                virtual.next = q;
+            } else {
+                virtual = virtual.next;
+            }
+        }
+
+        return res.next;
     }
 
 }

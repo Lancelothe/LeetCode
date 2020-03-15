@@ -3,7 +3,8 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/1/23
- * @description leetcode [21]
+ * @description leetcode [21] 合并两个有序链表
+ * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  */
 public class MergeTwoSortedLists {
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {

@@ -3,7 +3,8 @@ package algorithm.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/2
- * @description leetcode [234]
+ * @description leetcode [234] 回文链表
+ * 请判断一个链表是否为回文链表。
  */
 public class PalindromeLinkedList {
     public static boolean isPalindrome(ListNode head) {
