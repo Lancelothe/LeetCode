@@ -97,4 +97,12 @@ public class QuickSort {
         //递归调用右半数组
         quickSort2(arr, j + 1, high);
     }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{6, 4, 9, 3, 8, 2, 0, 7};
+        quickSort2(nums, 0, nums.length - 1);
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println(nums[i]);
+        }
+    }
 }
