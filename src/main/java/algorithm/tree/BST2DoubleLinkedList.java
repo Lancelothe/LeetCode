@@ -1,5 +1,7 @@
 package algorithm.tree;
 
+import java.util.Stack;
+
 /**
  * @author lancelot
  * @date 2020/3/22
@@ -8,8 +10,68 @@ package algorithm.tree;
  */
 public class BST2DoubleLinkedList {
 
+    // non-recursion
     public Node treeToDoublyList(Node root) {
+        if (root == null) return null;
 
+        Stack<Node> stack = new Stack<>();
+        Node cur = root;
+        Node pre = null;
+        Node mostRight = root;  //找到最右节点
+        while (mostRight.right!=null) {
+            mostRight = mostRight.right;
+        }
+
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+
+            cur = stack.pop();
+            if (pre == null) {
+                root = cur;
+            } else {
+                cur.left = pre;
+                pre.right = cur;
+            }
+            pre = cur;
+            cur = cur.right;
+        }
+
+        root.left = mostRight;
+        mostRight.right = root;
+
+        return root;
+    }
+
+    // recursion
+    public Node pre;
+    public Node head, tail;
+
+    public Node treeToDoublyList2(Node root) {
+        if (root == null) return null;
+
+        recursion(root);
+        tail.right = head;
+        head.left = tail;
+        return head;
+    }
+
+    public void recursion(Node root) {
+        if (root == null) return;
+
+        recursion(root.left);
+        root.left = pre;
+
+        if (pre == null) {
+            head = root;
+        } else {
+            pre.right = root;
+        }
+        pre = root;
+        tail = root;
+        recursion(root.right);
     }
 
     class Node {
