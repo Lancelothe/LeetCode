@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author lancelot
  * @date 2020/3/4
- * @description leetcode [94]
+ * @description leetcode [94] 二叉树的中序遍历
  */
 public class BinaryTreeInorderTraversal {
     public static List<Integer> inorderTraversal(TreeNode root) {

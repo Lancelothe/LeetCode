@@ -8,7 +8,9 @@ import java.util.Queue;
 /**
  * @author lancelot
  * @date 2020/3/4
- * @description leetcode [102]
+ * @description leetcode [102] 二叉树的层级遍历
+ *
+ * BFS
  */
 public class BinaryTreeLevelOrderTraversal {
     public static List<List<Integer>> levelOrder(TreeNode root) {

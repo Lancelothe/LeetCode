@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * @author lancelot
  * @date 2020/3/4
- * @description leetcode [103]
+ * @description leetcode [103] 二叉树的锯齿形层次遍历
  */
 public class BinaryTreeZigzagLevelOrderTraversal {
     public static List<List<Integer>> zigzagLevelOrder(TreeNode root) {

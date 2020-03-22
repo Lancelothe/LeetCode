@@ -3,7 +3,7 @@ package algorithm.tree;
 /**
  * @author lancelot
  * @date 2020/3/14
- * @description leetcode [559]
+ * @description leetcode [559] N叉树的最大深度
  */
 public class NAryTreeMaximumDepth {
 

@@ -3,7 +3,7 @@ package algorithm.tree;
 /**
  * @author lancelot
  * @date 2020/3/4
- * @description leetcode [104]
+ * @description leetcode [104] 二叉树最大深度
  */
 public class BinaryTreeMaximumDepth {
     public static int maxDepth(TreeNode root) {

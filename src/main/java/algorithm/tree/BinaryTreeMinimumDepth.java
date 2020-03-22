@@ -3,7 +3,7 @@ package algorithm.tree;
 /**
  * @author lancelot
  * @date 2020/3/4
- * @description leetcode [111]
+ * @description leetcode [111] 二叉树最小深度
  */
 public class BinaryTreeMinimumDepth {
     public static int minDepth(TreeNode root) {
