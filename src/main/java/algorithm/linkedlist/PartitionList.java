@@ -4,15 +4,31 @@ package algorithm.linkedlist;
  * @author lancelot
  * @date 2020/3/23
  * @description leetcode [86] 分隔链表
+ * 给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。
  *
+ * 你应当保留两个分区中每个节点的初始相对位置。
  */
 public class PartitionList {
     public ListNode partition(ListNode head, int x) {
         if (head == null) return null;
 
-        ListNode cur = head, next = head.next;
-        if (cur != null && next != null) {
-            
+        ListNode preHead = new ListNode(0), nextHead = new ListNode(0);
+        ListNode pre = preHead, next = nextHead;
+
+        while (head != null) {
+            if (head.val < x) {
+                pre.next = head;
+                pre = pre.next;
+            } else {
+                next.next = head;
+                next = next.next;
+            }
+            head = head.next;
         }
+
+        next.next = null;
+        pre.next = nextHead.next;
+
+        return preHead.next;
     }
 }
