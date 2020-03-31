@@ -9,6 +9,9 @@ package algorithm.linkedlist;
  * 如果有两个中间结点，则返回第二个中间结点。
  */
 public class LinkedListMiddle {
+    /**
+     * 思路：快慢指针法
+     */
     public ListNode middleNode(ListNode head) {
         if (head == null) return null;
 

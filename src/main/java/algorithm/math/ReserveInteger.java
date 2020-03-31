@@ -1,9 +1,15 @@
-package algorithm;
+package algorithm.math;
 
 /**
  * @author lancelot
  * @date 2019/2/18
- * @description leetcode [7]
+ * @description leetcode [7] 整数反转
+ * 给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
+ *
+ * 示例 1:
+ *
+ * 输入: 123
+ * 输出: 321
  */
 public class ReserveInteger {
 

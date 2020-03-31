@@ -12,9 +12,8 @@ package algorithm.dp;
  */
 public class ClimbingStairs {
     /**
-     * f(n) = f(n-1) + f(n-2)
-     * @param n
-     * @return
+     * 思路：
+     * 状态方程： f(n) = f(n-1) + f(n-2)
      */
     public static int climbStairs(int n) {
         if (n <= 2) return n;

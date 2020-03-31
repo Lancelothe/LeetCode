@@ -5,8 +5,19 @@ package algorithm.linkedlist;
  * @date 2020/2/2
  * @description leetcode [234] 回文链表
  * 请判断一个链表是否为回文链表。
+ *
+ * 输入: 1->2->2->1
+ * 输出: true
  */
 public class PalindromeLinkedList {
+    /**
+     * 思路：
+     * 1. 快慢指针找到中点；
+     * 2. 从中点断开分成前后两个链表；
+     * 3. 翻转后半段链表；
+     * 4. 两个指针分别从前后两个链表头向后移动，逐一比较，都相等，则为true，
+     * 注意这里比较是用后半段指针判断下一个节点是否为null，因为后半段链表短，如果总长度是奇数，前半段最后那个是中间节点就不用判断了。
+     */
     public static boolean isPalindrome(ListNode head) {
         // 边界条件：空链表或只有一个节点的链表
         if (head == null || head.next == null) {

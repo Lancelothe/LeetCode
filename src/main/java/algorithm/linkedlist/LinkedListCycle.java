@@ -9,13 +9,16 @@ package algorithm.linkedlist;
  * 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。
  */
 public class LinkedListCycle {
+    /**
+     * 思路：快慢指针法
+     */
     public static boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;
         }
 
         ListNode slow = head, fast = head;
-        while (fast !=  null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {

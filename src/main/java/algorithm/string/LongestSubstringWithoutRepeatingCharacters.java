@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.string;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,14 @@ import java.util.Map;
 /**
  * @author lancelot
  * @date 2019/5/5
- * @description leetcode [3]
+ * @description leetcode [3] 无重复字符的最长子串
+ * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+ *
+ * 示例 1:
+ *
+ * 输入: "abcabcbb"
+ * 输出: 3
+ * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
  */
 public class LongestSubstringWithoutRepeatingCharacters {
 
@@ -55,7 +62,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
      * 　　当 j = 5时，发现map内有此时 j 指向的a，所以更新 i 的值，表明之前的a在顺位第 5 个，所以ans_temp = 5-5+1 = 1,取max ，ans最终等于4.
      * 为什么不直接存下标？
      * 　　如果存储的是下标，那么最后更新的ans也只能是 j - i （新位置减去老位置），假如此时整个字符串内都没有重复，那么最后的答案就是length - 1 - 0 ，因为只有当有更新的时候才能下标直接相减。
-     * <p>
+     *
      * 参考： https://www.cnblogs.com/Xieyang-blog/p/8529870.html
      *
      * @param s
