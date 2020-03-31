@@ -20,6 +20,10 @@ package algorithm.bit;
  * 你能进一步完善解法吗？要求在C++或任何其他语言中不使用任何内置函数（如 C++ 中的 __builtin_popcount）来执行此操作。
  */
 public class CountingBits {
+    /**
+     * 思路：
+     * 也属于DP类型的题，要循环N次，第i次的计算需要依赖第i-1次的值。
+     */
     public int[] countBits(int num) {
         int[] bits = new int[num + 1];
         bits[0] = 0;
