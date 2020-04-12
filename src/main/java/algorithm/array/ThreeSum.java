@@ -16,12 +16,13 @@ public class ThreeSum {
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList();
         int len = nums.length;
-        if (nums == null || len < 3) return ans;
+        if (len < 3) return ans;
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) break;
-            if (i > 0 && nums[i] == nums[i - 1]) continue; // 去重
+            // 去重
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             int left = i + 1, right = nums.length - 1;
             while (left < right) {
