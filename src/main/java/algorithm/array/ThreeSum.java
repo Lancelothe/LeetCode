@@ -13,6 +13,16 @@ import java.util.List;
  * 注意：答案中不可以包含重复的三元组。
  */
 public class ThreeSum {
+
+    /**
+     * 思路：
+     * 1. 对数组排序
+     * 2. 左边负数，右边正数，则从数组两头开始用左边的负数+右边的正数是否为0：
+     *      结果大于0，则说明正数太大，则左移正数；
+     *      结果小于0，则说明负数太小，则右移负数；
+     * 3. 需要注意的是，要跳过重复的元素
+     * 时间复杂度：O(n^2) n 为数组长度
+     */
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList();
         int len = nums.length;
@@ -42,5 +52,10 @@ public class ThreeSum {
         }
 
         return ans;
+    }
+
+    public static void main(String[] args) {
+        List<List<Integer>> res = threeSum(new int[]{-1, 0, 1, 2, -1, -4});
+        System.out.println(res);
     }
 }
