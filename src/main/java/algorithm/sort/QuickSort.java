@@ -3,7 +3,7 @@ package algorithm.sort;
 /**
  * @author lancelot
  * @date 2020/3/17
- * 快速排序
+ * @description 快速排序
  */
 public class QuickSort {
 
@@ -98,9 +98,45 @@ public class QuickSort {
         quickSort2(arr, j + 1, high);
     }
 
+    //####################################################
+
+    public static void quickSort3(int[] arr) {
+        quickSort3(arr, 0, arr.length - 1);
+    }
+
+    private static void quickSort3(int[] arr, int startIndex, int endIndex) {
+        if (endIndex <= startIndex) {
+            return;
+        }
+        //切分
+        int pivotIndex = partition3(arr, startIndex, endIndex);
+        quickSort3(arr, startIndex, pivotIndex - 1);
+        quickSort3(arr, pivotIndex + 1, endIndex);
+    }
+
+    private static int partition3(int[] arr, int startIndex, int endIndex) {
+        int pivot = arr[startIndex];//取基准值
+        int mark = startIndex;//Mark初始化为起始下标
+
+        for (int i = startIndex + 1; i <= endIndex; i++) {
+            if (arr[i] < pivot) {
+                //小于基准值 则mark+1,并交换位置。
+                mark++;
+                int p = arr[mark];
+                arr[mark] = arr[i];
+                arr[i] = p;
+            }
+        }
+        //基准值与mark对应元素调换位置
+        arr[startIndex] = arr[mark];
+        arr[mark] = pivot;
+        return mark;
+    }
+
+
     public static void main(String[] args) {
         int[] nums = new int[]{6, 4, 9, 3, 8, 2, 0, 7};
-        quickSort2(nums, 0, nums.length - 1);
+        quickSort3(nums, 0, nums.length - 1);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
         }
