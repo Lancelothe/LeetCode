@@ -5,9 +5,24 @@ package algorithm.linkedlist;
  * @date 2020/3/23
  * @description leetcode [61] 旋转链表
  * 给定一个链表，旋转链表，将链表每个节点向右移动 k 个位置，其中 k 是非负数。
+ *
+ * 示例 1:
+ * 输入: 1->2->3->4->5->NULL, k = 2
+ * 输出: 4->5->1->2->3->NULL
+ * 解释:
+ * 向右旋转 1 步: 5->1->2->3->4->NULL
+ * 向右旋转 2 步: 4->5->1->2->3->NULL
+ *
+ * 链接：https://leetcode-cn.com/problems/rotate-list
  */
 public class RotateList {
 
+    /**
+     * 思路：
+     * 1. 求链表长度n，对旋转k对n取余，只需要旋转k%n的位置即可
+     * 2. 先用一个指针前行k步，然后另一个指针从头开始，同时前进，当快指针到终点，则慢指针也到了分割点
+     * 3. 将快慢指针的next重新指向
+     */
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null) return null;
 
