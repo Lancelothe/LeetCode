@@ -51,6 +51,9 @@ public class CombinationSum {
     }
 
     public static void main(String[] args) {
-        System.out.println(new CombinationSum().combinationSum(new int[]{2, 3, 6, 7}, 7));
+        System.out.println(
+                new CombinationSum()
+                        .combinationSum(new int[]{2, 3, 6, 7}, 7)
+        );
     }
 }
