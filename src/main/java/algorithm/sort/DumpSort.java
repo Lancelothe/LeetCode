@@ -22,7 +22,7 @@ public class DumpSort {
         int left, right, j;
         while ((left = 2 * i + 1) <= len) {    //判断当前父节点有无左节点（即有无孩子节点，left为左节点）
             right = left + 1;  //右节点
-0            j = left;   //j"指针指向左节点"
+            j = left;   //j"指针指向左节点"
             if (j < len && arr[left] < arr[right])    //右节点大于左节点
                 j++;     //当前把"指针"指向右节点
             if (arr[i] < arr[j])    //将父节点与孩子节点交换（如果上面if为真，则arr[j]为右节点，如果为假arr[j]则为左节点）
