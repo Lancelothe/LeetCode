@@ -52,7 +52,6 @@ public class BinaryTreeTilt {
         t1.left = t2;
         t1.right = t3;
 
-
         System.out.println(new BinaryTreeTilt().findTilt(t1));
     }
 }
