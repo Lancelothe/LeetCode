@@ -3,7 +3,7 @@ package algorithm.datastructure.linkedlist;
 /**
  * @author lancelot
  * @date 2020/2/1
- * @description leetcode [206] 翻转链表
+ * @description leetcode [206]  翻转链表 & 剑指 Offer 24
  * @difficulty Easy
  * 反转一个单链表。
  *

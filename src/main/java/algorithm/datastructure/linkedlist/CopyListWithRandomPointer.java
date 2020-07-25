@@ -1,5 +1,8 @@
 package algorithm.datastructure.linkedlist;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author lancelot
  * @date 2020/4/12
@@ -10,6 +13,13 @@ package algorithm.datastructure.linkedlist;
  * 示例1：
  * 输入：head = [[7,null],[13,0],[11,4],[10,2],[1,0]]
  * 输出：[[7,null],[13,0],[11,4],[10,2],[1,0]]
+ *
+ * 提示：
+ * -10000 <= Node.val <= 10000
+ * Node.random 为空（null）或指向链表中的节点。
+ * 节点数目不超过 1000 。
+ *
+ * 链接：https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof
  */
 public class CopyListWithRandomPointer {
 
@@ -64,6 +74,29 @@ public class CopyListWithRandomPointer {
         return copyHead;
     }
 
+    /**
+     * 哈希表法
+     *
+     * @param head
+     * @return
+     */
+    public Node copyRandomListMap(Node head) {
+        if (head == null) {
+            return head;
+        }
+        //map中存的是(原节点，拷贝节点)的一个映射
+        Map<Node, Node> map = new HashMap<>();
+        for (Node cur = head; cur != null; cur = cur.next) {
+            map.put(cur, new Node(cur.val));
+        }
+        //将拷贝的新的节点组织成一个链表
+        for (Node cur = head; cur != null; cur = cur.next) {
+            map.get(cur).next = map.get(cur.next);
+            map.get(cur).random = map.get(cur.random);
+        }
+
+        return map.get(head);
+    }
 
     static class Node {
         int val;

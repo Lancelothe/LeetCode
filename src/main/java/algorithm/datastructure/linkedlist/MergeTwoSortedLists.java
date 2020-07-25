@@ -5,7 +5,13 @@ package algorithm.datastructure.linkedlist;
  * @date 2020/1/23
  * @description leetcode [21] 合并两个有序链表
  * @difficulty Easy
- * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
+ *
+ * 示例：
+ * 输入：1->2->4, 1->3->4
+ * 输出：1->1->2->3->4->4
+ *
+ * 链接：https://leetcode-cn.com/problems/merge-two-sorted-lists
  */
 public class MergeTwoSortedLists {
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -31,27 +37,4 @@ public class MergeTwoSortedLists {
         return dummyHead.next;
     }
 
-    /*
-     * @lc app=leetcode id=21 lang=java
-     *
-     * [21] Merge Two Sorted Lists
-     *
-     * https://leetcode.com/problems/merge-two-sorted-lists/description/
-     *
-     * algorithms
-     * Easy (45.58%)
-     * Total Accepted:    813.6K
-     * Total Submissions: 1.6M
-     * Testcase Example:  '[1,2,4]\n[1,3,4]'
-     *
-     * Merge two sorted linked lists and return it as a new list. The new list
-     * should be made by splicing together the nodes of the first two lists.
-     *
-     * Example:
-     *
-     * Input: 1->2->4, 1->3->4
-     * Output: 1->1->2->3->4->4
-     *
-     *
-     */
 }
