@@ -1,4 +1,4 @@
-package algorithm.datastructure.array;
+package algorithm.binarysearch;
 
 /**
  * @author lancelot

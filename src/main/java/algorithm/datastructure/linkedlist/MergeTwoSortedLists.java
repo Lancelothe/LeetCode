@@ -3,7 +3,7 @@ package algorithm.datastructure.linkedlist;
 /**
  * @author lancelot
  * @date 2020/1/23
- * @description leetcode [21] 合并两个有序链表
+ * @description leetcode [21] 合并两个有序链表 & 剑指 Offer 25
  * @difficulty Easy
  * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
  *
