@@ -94,7 +94,6 @@ public class SearchInRotatedSortedArray {
         int len = nums.length;
 
         // 题目给的数据保证数组非空，因此无需再判断
-
         int left = 0;
         int right = len - 1;
         while (left < right) {
