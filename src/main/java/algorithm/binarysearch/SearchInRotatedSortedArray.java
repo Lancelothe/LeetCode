@@ -1,4 +1,4 @@
-package algorithm.datastructure.array;
+package algorithm.binarysearch;
 
 /**
  * @author lancelot
@@ -151,8 +151,19 @@ public class SearchInRotatedSortedArray {
     }
 
     public static void main(String[] args) {
-        System.out.println(new SearchInRotatedSortedArray().search2(new int[]{1, 1, 1, 1, 1, 2, 1, 1, 1}, 2));
+        System.out.println("****************** search1 ******************");
+        System.out.println(new SearchInRotatedSortedArray().search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
+        System.out.println(new SearchInRotatedSortedArray().search(new int[]{5, 5, 5, 1, 2, 3, 4, 5}, 5));
+        System.out.println(new SearchInRotatedSortedArray().search(new int[]{1, 1, 1, 1, 1, 2, 1, 1, 1}, 2));
+
+        System.out.println("****************** search2 ******************");
         System.out.println(new SearchInRotatedSortedArray().search2(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
+        System.out.println(new SearchInRotatedSortedArray().search2(new int[]{5, 5, 5, 1, 2, 3, 4, 5}, 5));
+        System.out.println(new SearchInRotatedSortedArray().search2(new int[]{1, 1, 1, 1, 1, 2, 1, 1, 1}, 2));
+
+        System.out.println("****************** search3 ******************");
+        System.out.println(new SearchInRotatedSortedArray().search3(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
         System.out.println(new SearchInRotatedSortedArray().search3(new int[]{5, 5, 5, 1, 2, 3, 4, 5}, 5));
+        System.out.println(new SearchInRotatedSortedArray().search3(new int[]{1, 1, 1, 1, 1, 2, 1, 1, 1}, 2));
     }
 }
