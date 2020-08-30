@@ -1,4 +1,4 @@
-package algorithm.datastructure.array;
+package algorithm.binarysearch;
 
 /**
  * @author lancelot
@@ -24,37 +24,32 @@ package algorithm.datastructure.array;
  */
 public class MedianOfTwoSortedArrays {
 
+    // O(m+n)
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int medianLength = (nums1.length + nums2.length) / 2 + 1;
-        int[] ans = new int[medianLength];
         double res = 0;
+        int m = nums1.length, n = nums2.length;
+        int medianLength = (m + n) / 2 + 1;
         int left = 0, right = 0;
-        for (int i = 0; i < medianLength && left < nums1.length && right < nums2.length; i++) {
-            if (left >= nums1.length) {
-
-                ans[i] = nums2[right++];
-
+        int aIndex = 0, bIndex = 0;
+        for (int i = 0; i < medianLength; i++) {
+            left = right;
+            if (aIndex < m && (bIndex >= n || nums1[aIndex] < nums2[bIndex])) {
+                right = nums1[aIndex++];
             } else {
-
-            }
-
-            if (nums1[left] < nums2[right]) {
-                ans[i] = nums1[left++];
-            } else {
-                ans[i] = nums2[right++];
+                right = nums2[bIndex++];
             }
         }
 
-
-        if ((nums1.length + nums2.length) % 2 == 0) {
-            res = (ans[ans.length - 2] + ans[ans.length - 1]) / 2.0;
+        if (((m + n) & 1) == 0) {
+            res = (left + right) / 2.0;
         } else {
-            res = ans[ans.length - 1];
+            res = right;
         }
 
         return res;
     }
 
+    // O(log(m+n))
     public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
         int length = nums1.length + nums2.length;
         //选择长度较小的那个数组进行查找
@@ -90,7 +85,7 @@ public class MedianOfTwoSortedArrays {
 
     public static void main(String[] args) {
         System.out.println(new MedianOfTwoSortedArrays()
-                .findMedianSortedArrays2(new int[]{2, 3, 8, 10, 11, 21}, new int[]{1, 4, 5, 6, 7, 9, 13, 14}));
+                .findMedianSortedArrays(new int[]{2, 3, 8, 10, 11, 21}, new int[]{1, 4, 5, 6, 7, 9, 13, 14}));
     }
 
 }
